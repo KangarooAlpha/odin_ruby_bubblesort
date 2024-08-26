@@ -1,22 +1,18 @@
 def bubble_sort(arr)
-  newArr = []
-  while newArr != arr 
-    newArr = arr
-    len = arr.length
-    catch (:indexloop) do 
-      arr = arr.each_with_index do |elem, ind|
-        a = elem
+  debugger
+  swaps = []
+  while swaps != 0
+    swaps = 0
+    len = arr.length - 1
+    len.times do |ind|
+        a = arr[ind].to_i
         b = arr[ind+1].to_i
-        if ind == len
-         throw :indexloop
-        end  
         if a > b 
           arr[ind], arr[ind+1] = b, a
+          swaps += 1
         end
-      debugger
       end
     end
-  end
   newArr
 end
 
